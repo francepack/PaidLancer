@@ -10,9 +10,11 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import SearchScreen from '../screens/SearchScreen';
+import HeaderMain from '../screens/Header';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
+  Header: HeaderMain,
 });
 
 HomeStack.navigationOptions = {
@@ -66,7 +68,7 @@ SearchStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={Platform.OS === 'ios' ? 'ios-search' : 'md-search'}
     />
   ),
 };

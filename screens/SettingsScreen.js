@@ -12,7 +12,7 @@ export default function SettingsScreen() {
 }
 
 SettingsScreen.navigationOptions = {
-  title: 'app.json',
+  title: 'Settings',
 };
 
 const styles = StyleSheet.create({
