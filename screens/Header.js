@@ -4,19 +4,28 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function Header() {
   return (
     <View style={styles.container}>
-      <Text>PaidLancer</Text>
+      <Text style={styles.title}>
+        <Text style={styles.emph}>Paid</Text>
+        <Text>Lancer</Text>
+      </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
     backgroundColor: '#fff',
+    paddingTop: 30,
   },
-  getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'center',
+  title: {
+    color: '#54DB9F',
+    fontSize: 32,
+    letterSpacing: 2,
+
   },
+  emph: {
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+  }
 });
