@@ -4,9 +4,8 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 export default function LinksScreen() {
   return (
     <ScrollView style={styles.container}>
-      {/* <ExpoLinksView /> */}
       <Text style={styles.getStartedText}>
-       Sample link text here
+        Sample link text here
       </Text>
     </ScrollView>
   );
