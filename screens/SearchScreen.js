@@ -5,7 +5,7 @@ export default function SearchScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.getStartedText}>
-        Sample link text here
+        Sample link text here - Search
       </Text>
     </ScrollView>
   );

@@ -5,7 +5,7 @@ export default function SettingsScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.getStartedText}>
-        Sample link text here
+        Sample link text here - Settings
       </Text>
     </ScrollView>
   );
