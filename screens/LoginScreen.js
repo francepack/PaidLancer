@@ -5,13 +5,13 @@ export default function LoginScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.getStartedText}>
-        Sample link text here - Login
+        email
       </Text>
       <TextInput
       style={styles.input}
     />
     <Text style={styles.getStartedText}>
-        Sample link text here - Login
+        password
       </Text>
       <TextInput
       style={styles.input}
@@ -21,7 +21,7 @@ export default function LoginScreen() {
 }
 
 LoginScreen.navigationOptions = {
-  title: 'Login',
+  header: null,
 };
 
 const styles = StyleSheet.create({
@@ -34,11 +34,13 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
-    textAlign: 'center',
+    paddingLeft: 30,
+    paddingBottom: 4,
   },
   input: {
     height: 40, 
     borderColor: 'gray', 
-    borderWidth: 1
+    borderWidth: 1,
+    marginBottom: 30,
   }
 })
