@@ -1,47 +1,84 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { 
   ScrollView, 
   StyleSheet, 
   View, 
   Text, 
   TextInput, 
+  TouchableHighlight,
+  Modal,
   Button 
 } from 'react-native';
 
-export default function LoginScreen() {
-  return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <View style={styles.content}>
-      </View>
-      <View>
-        <Text style={styles.getStartedText}>
-          email
-        </Text>
-        <TextInput
-          style={styles.input}
-        />
-      </View>
-      <View>
-        <Text style={styles.getStartedText}>
-          password
-        </Text>
-        <TextInput
-          style={styles.input}
-        />
-      </View>
-      <View style={styles.loginBtn}>
-        <Button 
-          title='Login' 
-        >
-        </Button>
-      </View>
-      <View style={styles.fill}>
-        <Text style={styles.newUser}>
-        new? click here!
-        </Text>
-      </View>
-    </ScrollView>
-  );
+class LoginScreen extends Component {
+  state = {
+    modalVisible: false,
+  }
+
+  setModalVisible(visible) {
+    this.setState({modalVisible: visible});
+  }
+
+  render() { 
+    return (
+      <ScrollView contentContainerStyle={styles.container}>
+        <View style={styles.content}>
+        </View>
+        <View>
+          <Text style={styles.getStartedText}>
+            email
+          </Text>
+          <TextInput
+            style={styles.input}
+          />
+        </View>
+        <View>
+          <Text style={styles.getStartedText}>
+            password
+          </Text>
+          <TextInput
+            style={styles.input}
+          />
+        </View>
+        <View style={styles.loginBtn}>
+          <Button 
+            title='Login' 
+          >
+          </Button>
+        </View>
+        <View style={styles.fill}>
+          <TouchableHighlight onPress={() => {
+            this.setModalVisible(true);
+          }}>
+            <Text style={styles.newUser}>
+              new? click here to register!
+            </Text>
+          </TouchableHighlight>
+        </View>
+        <Modal
+          animationType="slide"
+          transparent={false}
+          visible={this.state.modalVisible}
+          onRequestClose={() => {
+              Alert.alert('Modal has been closed.');
+            }}
+          >
+          <View style={{marginTop: 22}}>
+            <View>
+              <Text>Login Page</Text>
+              <TouchableHighlight
+                onPress={() => {
+                  this.setModalVisible(!this.state.modalVisible);
+                }}
+              >
+                <Text>Exit Screen</Text>
+              </TouchableHighlight>
+            </View>
+          </View>
+        </Modal>
+      </ScrollView>
+    );
+  }
 }
 
 LoginScreen.navigationOptions = {
@@ -84,3 +121,5 @@ const styles = StyleSheet.create({
     width: 120,
   },
 })
+
+export default LoginScreen;
