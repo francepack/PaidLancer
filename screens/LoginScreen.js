@@ -7,6 +7,15 @@ export default function LoginScreen() {
       <Text style={styles.getStartedText}>
         Sample link text here - Login
       </Text>
+      <TextInput
+      style={styles.input}
+    />
+    <Text style={styles.getStartedText}>
+        Sample link text here - Login
+      </Text>
+      <TextInput
+      style={styles.input}
+    />
     </ScrollView>
   );
 }
@@ -27,4 +36,9 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
+  input: {
+    height: 40, 
+    borderColor: 'gray', 
+    borderWidth: 1
+  }
 })
