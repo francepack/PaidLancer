@@ -15,14 +15,13 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#caf7f7',
     paddingTop: 30,
   },
   title: {
-    color: '#54DB9F',
+    color: '#5a9448',
     fontSize: 32,
     letterSpacing: 2,
-
   },
   emph: {
     fontStyle: 'italic',
