@@ -11,7 +11,7 @@ export default function LoginScreen() {
   );
 }
 
-SettingsScreen.navigationOptions = {
+LoginScreen.navigationOptions = {
   title: 'Login',
 };
 

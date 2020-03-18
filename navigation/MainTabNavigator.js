@@ -6,19 +6,18 @@ import {
 } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
+// import HomeScreen from '../screens/HomeScreen';
+import LoginScreen from '../screens/LoginScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import SearchScreen from '../screens/SearchScreen';
-import HeaderMain from '../screens/Header';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-  Header: HeaderMain,
+const LoginStack = createStackNavigator({
+  Login: LoginScreen,
 });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+LoginStack.navigationOptions = {
+  tabBarLabel: 'Login',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -30,6 +29,24 @@ HomeStack.navigationOptions = {
     />
   ),
 };
+
+// const HomeStack = createStackNavigator({
+//   Home: HomeScreen,
+// });
+
+// HomeStack.navigationOptions = {
+//   tabBarLabel: 'Home',
+//   tabBarIcon: ({ focused }) => (
+//     <TabBarIcon
+//       focused={focused}
+//       name={
+//         Platform.OS === 'ios'
+//           ? `ios-information-circle${focused ? '' : '-outline'}`
+//           : 'md-information-circle'
+//       }
+//     />
+//   ),
+// };
 
 const LinksStack = createStackNavigator({
   Links: LinksScreen,
@@ -74,7 +91,8 @@ SearchStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
+  LoginStack,
+  // HomeStack,
   LinksStack,
   SettingsStack,
   SearchStack,
