@@ -22,6 +22,11 @@ export default function LoginScreen() {
           style={styles.input}
         />
       </View>
+      <View style={styles.fill}>
+        <Text style={styles.newUser}>
+        new? click here!
+        </Text>
+      </View>
     </ScrollView>
   );
 }
@@ -35,13 +40,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 15,
     backgroundColor: '#c0eaea',
-    height: 700,
   },
   content: {
     height: 50,
   },
   getStartedText: {
-    fontSize: 17,
+    fontSize: 15,
     color: 'rgba(96,100,109, 1)',
     lineHeight: 24,
     paddingLeft: 30,
@@ -53,5 +57,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 30,
     width: 360,
-  }
+  },
+  fill: {
+    flex: 1, 
+    height: 300,    
+    backgroundColor: '#c0eaea',
+    justifyContent: 'center', 
+  },
+  newUser: {
+    fontSize: 17,
+  },
 })
