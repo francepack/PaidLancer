@@ -1,5 +1,12 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, Text, TextInput } from 'react-native';
+import { 
+  ScrollView, 
+  StyleSheet, 
+  View, 
+  Text, 
+  TextInput, 
+  Button 
+} from 'react-native';
 
 export default function LoginScreen() {
   return (
@@ -21,6 +28,12 @@ export default function LoginScreen() {
         <TextInput
           style={styles.input}
         />
+      </View>
+      <View style={styles.loginBtn}>
+        <Button 
+          title='Login' 
+        >
+        </Button>
       </View>
       <View style={styles.fill}>
         <Text style={styles.newUser}>
@@ -66,5 +79,8 @@ const styles = StyleSheet.create({
   },
   newUser: {
     fontSize: 17,
+  },
+  loginBtn: {
+    width: 120,
   },
 })
