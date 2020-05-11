@@ -1,0 +1,2 @@
+# PaidLance
+This is an app I created to try out React Native. I used schedule skilled laborers specializing in stage set up/tear down for gigs. In this career, I learned that there are so many specialized skills, but tracking every individual employee's skillsets and job preferences was a constant challenge. This app, while a prototype, is conceived to give more power to laborers in choosing what they do for work with whom.
